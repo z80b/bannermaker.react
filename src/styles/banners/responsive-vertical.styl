@@ -1,0 +1,45 @@
+@import '../../styles/mixins/*.styl'
+
+.responsive-vertical
+  &__wrapper
+    display table
+    padding 0
+    margin 0
+    width 100%
+
+  .banner-preview
+    width 388px
+    height 797px
+    position relative
+
+    &__wrapper
+      float left
+      display table-cell
+      padding-top 30px
+      margin 30px
+
+    &__plate
+      position absolute
+      bottom 20px
+      left 20px
+      right 20px
+      padding 12px 10px 10px
+      background-color rgba(255, 255, 255, .95)
+      text-align center
+      font(400)
+
+    &__title
+      font(24px, 600)
+
+    &__sub-title
+      font(16px)
+
+  .banner-slide-form
+    width 60%
+    margin 0 auto
+    display table-cell
+    padding-top 102px
+    vertical-align top
+    padding-right 130px
+    .banner-input
+      width 100%

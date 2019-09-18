@@ -1,0 +1,12 @@
+$weights = 400 500 600 700
+font($arg1, $arg2 = false, $arg3 = false)
+  if $arg1 in $weights
+    font-weight $arg1
+    if $arg2
+      line-height $arg2
+  else
+    font-size $arg1
+  if $arg2
+    font-weight $arg2
+  if $arg3
+    line-height $arg3

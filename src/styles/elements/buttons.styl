@@ -1,0 +1,108 @@
+@import '../../styles/mixins/*.styl'
+    
+$roundButton
+    display inline-block
+    border solid 2px #5cb85c
+    border-radius 50%
+    background #fff
+    box-sizing border-box
+    color #5cb85c
+    font(16px, 700, 22px)
+    padding 0
+    margin 0
+    width 24px
+    height 24px
+    vertical-align middle
+    box-shadow 1px 1px 5px rgba(#000, .5)
+    transition .3s all ease
+    outline none
+    
+    &:hover
+        color #fff
+        background #5cb85c
+        
+    &--add
+        font-size 24px
+        float right
+    
+    &--del
+        color #d43f3a
+        border-color #d43f3a
+        
+        &:hover
+            background #d43f3a
+            
+$promoButton
+    box-sizing border-box
+    display inline-block
+    border-width .06em
+    border-style solid
+    padding .33em 3.8em
+    line-height 1.86em
+    font-size 1.5em
+    font-weight 500
+    text-decoration none
+    text-align center
+    white-space nowrap
+    transition border-color .2s, color .2s, background-color .2s
+    cursor pointer
+
+    &[data-style="black"]
+        background #333
+        border-color #333
+        color #fff
+        
+        &:hover
+            color #333
+            background #fff
+            border-color #fff
+
+    &[data-style="white"]
+        background #fff
+        border-color #fff
+        color #333
+        
+        &:hover
+            color #fff
+            background #333
+            border-color #333
+    
+    &[data-style="black-fill"]
+        background rgba(#333, .8)
+        border-color rgba(#333, .8)
+        color rgba(#fff, .8)
+        
+        &:hover
+            color rgba(#333, .8)
+            background rgba(#fff, .8)
+            border-color rgba(#fff, .8)
+        
+    &[data-style="white-fill"]
+        color rgba(#333, .8)
+        background rgba(#fff, .8)
+        border-color rgba(#fff, .8)
+        
+        &:hover
+            background rgba(#333, .8)
+            border-color rgba(#333, .8)
+            color rgba(#fff, .8)
+            
+    &[data-style="black-border"]
+        color #333
+        background none
+        border-color #333
+        
+        &:hover
+            background rgba(#333, .8)
+            border-color rgba(#333, .8)
+            color rgba(#fff, .8)           
+        
+    &[data-style="white-border"]
+        color #fff
+        border-color #fff
+        background none
+        
+        &:hover
+            color rgba(#333, .8)
+            background rgba(#fff, .8)
+            border-color rgba(#fff, .8)

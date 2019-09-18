@@ -1,5 +1,5 @@
-import React from 'react'
-import BannerSelectForm, { GetBannerName } from './banner-list.jsx'
+import React from 'react';
+import BannerSelectForm, { GetBannerName } from '@/banner-list.jsx';
 // import { browserHistory } from 'react-router-dom'
 
 

@@ -1,0 +1,294 @@
+@import '../b-form'
+@import '../elements/*.styl'
+@import '../mixins/*.styl'
+
+.main-container {
+    width: 1206px;
+}
+
+.sq-main-banner-wrapper {
+    max-width: 1206px;
+    padding: 20px 0 0;
+}
+  
+.main-teaser-long__item--redesign {
+    clear: both;
+    width: 100%;
+    display: block;
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+}
+
+.main-teaser-long__item--redesign {
+    position: relative;
+}
+
+.teaser-long {
+    display: block;
+    width: 960px;
+    height: 135px;
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/*.html_wide */.teaser-long {
+    width: 1206px;
+    height: 170px;
+}
+
+.teaser-long:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0;
+    transition: opacity .4s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.teaser-long__button {
+    display: block;
+    width: 160px;
+    height: 32px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -16px 0 0 -80px;
+    transition: all .2s linear;
+    font(13px, 400, 32px);
+    background: #fff;
+    color: #333;
+    opacity: 0;
+    text-decoration: none !important;
+}
+/*.html_wide*/ .teaser-long__button {
+    width: 200px;
+    height: 40px;
+    margin: -20px 0 0 -100px;
+    font(13px, 400, 40px);
+}
+
+.teaser-long__button[data-button-style="white"] {
+    background: #fff;
+    color: #333;
+}
+
+.teaser-long__button[data-button-style="black"] {
+    background: #333;
+    color: #fff;
+}
+
+.main-teaser-long__item--redesign:hover .teaser-long:after {
+    opacity: .2;
+}
+
+.main-teaser-long__item--redesign:hover .teaser-long__button {
+    opacity: 1;
+}
+
+.lmda-dragger-elem {
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.lmda-dragger-elem[data-type="buttons"] {
+    z-index: 2;
+}
+
+.lmda-dragger-elem[data-hover="on"] {
+    opacity: 0;
+    transition: opacity .2s linear;
+}
+
+.main-teaser-long__item--redesign:hover .lmda-dragger-elem[data-hover="on"] {
+    opacity: 1;
+}
+
+.sq-main-banner-img {
+    display: block;
+    cursor: move;
+    
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.lmda-dragger-elem--text {
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+
+
+
+/* Countdown timer */
+.countdown {
+    font(16px, 500);
+    text-align: center;
+    color: #000000;
+    letter-spacing: .015em;
+    cursor: move;
+    position: static !important;
+    white-space: nowrap;
+    
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.widescreen .countdown {
+    font(16px);
+}
+
+.countdown .countdown__title {
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    font-size: 100%;
+    margin-right: 15px;
+}
+.countdown .countdown-values {
+    display: inline-block;
+}
+.countdown__value {
+    display: inline-block;
+    line-height: 20px;
+    margin-left: 16px;
+    text-align: left;
+    white-space: nowrap;
+    font-size: 100%;
+    position: relative;
+    font-family: inherit !important;
+}
+
+/*.widescreen .countdown__value {
+    line-height: 40px;
+}*/
+.countdown__value_hidden + .countdown__value {
+    margin-left: 7px;
+}
+.countdown__value:after {
+    padding-left: 3px;
+    font-family: inherit;
+}
+.countdown__value_days:after {
+    content: 'д'
+}
+.countdown__value_hours:after {
+    content: 'ч'
+}
+.countdown__value_minutes:after {
+    content: 'м'
+}
+.countdown__value_seconds:after {
+    content: 'с';
+    position: absolute;
+    top: 0;
+    right: -8px;
+}
+.countdown__value_seconds {
+    display: inline-block;
+    width: 41px;
+}
+.countdown__value_hidden {
+    display: none;
+}
+.countdown__value:before {
+    content: '';
+    display: inline-block;
+    height: 13px;
+    border-left: 1px solid;
+    margin-right: 16px;
+}
+.countdown__value_days:before {
+    border-left: none;
+    margin-right: 0;
+}
+.countdown__value:first-child {
+    margin-left: 0;
+}
+.countdown__value_hidden + .countdown__value {
+    margin-left: -22px;
+}
+.countdown__value:first-child:before,
+.countdown__value_hidden + .countdown__value:before {
+    display: none;
+}
+
+
+
+/*form*/
+.form-section {
+    margin-top: 70px;
+    padding: 0 20px;
+}
+
+.input-list {
+    display: table;
+    width: 100%;
+    margin: 0 0 30px;
+}
+
+.input-list__cell {
+    display: block;
+    width: 180px;
+    float: left;
+    margin: 0 10px;
+}
+
+.input-list__label {
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+.input-list__checkbox,
+.input-list__number {
+    width: 15px;
+    display: inline-block;
+    vertical-align: top;
+    height: 21px;
+    margin: 0;
+}
+
+.input-list__number {
+    width: 75px;
+}
+
+.input-list__cell_w340 {
+    width: 340px;
+}
+
+input[type=checkbox], input[type=radio] {
+    margin: 0;
+}
+
+.b-fieldset--timer .b-field__checkbox--timer {
+    margin-right: 5px;
+}
+
+.b-fieldset--timer .b-fieldset__body {
+    overflow: hidden;
+}
+
+.b-fieldset--timer .b-position__panel--timer-position {
+    float: left;
+    width: auto;
+}
+
+.b-fieldset--timer .b-position__panel-body,
+.b-fieldset--timer .b-position__panel-right {
+    width: auto;
+}

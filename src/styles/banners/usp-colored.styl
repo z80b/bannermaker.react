@@ -1,0 +1,206 @@
+
+@import '../b-form'
+@import '../elements/*.styl'
+
+.bannermaker {
+
+    &.usp-colored {
+        width: 1206px;
+        box-sizing: border-box;
+        background: hsla(0,0%,100%,.9);
+        margin: 0 auto;
+        padding-bottom: 50px;
+
+        .b-field__textarea {
+            line-height: 1.4;
+            height: 34px;
+        }
+
+        .banner-preview-wrap {
+            width: 980px;
+            padding: 20px 10px;
+            margin: 0 auto 10px;
+        }
+
+        .banner-preview {
+            width: 320px;
+            height: 64px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .banner-config {
+            padding: 40px;
+        }
+
+        label {
+            display: block;
+        }
+
+        .b-markup-button {
+            margin: 10px auto 20px;
+        }
+
+        .banner-preview__icon {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .banner-preview__text {
+            display: inline-block;
+            vertical-align: middle;
+            width: 65%;
+            font-size: 13px;
+            line-height: 18px;
+            height: 36px;
+            overflow: hidden;
+        }
+
+        .banner-preview__text a {
+            text-decoration: none;
+        }
+
+        .banner-preview__arrow {
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+            padding: 15px 17px;
+        }
+
+        .banner-config__icon-pickers {
+            margin: 10px 0 20px 0;
+        }
+
+        .banner-config__color-picker {
+            display: inline-block;
+            vertical-align: top;
+            margin: 8px 20px 0px 0;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+        }
+
+        .b-form__field_icon-picker {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 20px 0 0;
+            width: 64px;
+            height: 64px;
+        }
+
+        .b-field__radio__rectangle {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+        }
+
+        .b-field__radio_icon-picker {
+            opacity: 0;
+        }
+
+        .b-field__label_icon-picker {
+            position: relative;
+            width: 64px;
+            height: 64px;
+            cursor: pointer;
+        }
+
+        .b-field__label_icon-picker svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .b-field__radio_icon-picker:checked + svg {
+            border: 1px solid #fff;
+        }
+
+        .b-field__label_color-pickers {
+            display: block;
+        }
+
+        .b-field__label_color-picker {
+            position: relative;
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+        }
+
+        .b-field__radio_color-picker {
+            opacity: 0;
+        }
+
+         .b-field__label_color-picker svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+         }
+
+        .b-field__radio_color-picker:checked + .b-field__radio__rectangle {
+            border: 1px solid grey;
+        }
+
+
+        .b-fieldset {
+            margin: 0 0 20px;
+
+            &_usp-colored {
+                background: rgba(0,0,0,.8);
+                border: 1px solid rgba(255, 255, 255, 0.6);
+
+            }
+                        
+        }
+
+        .b-form__field.b-field--checkbox input[type="checkbox"] {
+            margin: 0 10px 0 0;
+        }
+
+        .b-markup-button {
+            width: 175px;
+        }
+
+
+        .b-switcher__input {
+            height: auto;
+        }
+
+    }
+
+}
+
+body {
+    font-weight: 500;
+}
+
+.main-container {
+    background: none;
+    width: 100%;
+}
+
+.bannermaker.usp-colored .banner-preview .b-draggable__element--button[data-style=white] {
+    background: #fff;
+    color: #333;
+    border: none;
+}
+
+.bannermaker.usp-colored .banner-preview .b-draggable__element--button[data-style=white]:hover {
+    background: #fff;
+    color: #333;
+    border: none;
+}
+
+.bannermaker.usp-colored .banner-preview .b-draggable__element--button[data-style=black] {
+    background: #333;
+    color: #fff;
+    border: none;
+}
+
+.bannermaker.usp-colored .banner-preview .b-draggable__element--button[data-style=black]:hover {
+    background: #333;
+    color: #fff;
+    border: none;
+}

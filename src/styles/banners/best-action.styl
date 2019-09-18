@@ -1,0 +1,404 @@
+@import '../../styles/mixins/*.styl'
+
+.best-action-sum16
+
+  .banner-slide-wrap
+    background-color #f0f0f0
+    padding 20px
+    border-radius 2px
+    display block
+    margin auto
+    margin-bottom 2em
+
+
+  .banner-slide-viewbox
+    min-width 320px
+    text-align left
+    margin 0 auto
+    &.desktop
+      width 728px
+
+    &.widescreen
+      width 974px
+
+      .ibanner__elements
+        padding 4em 6em 2.5em 5.5em
+
+      .ibanner__heading
+        font(5.2em, 500, 1.2)
+
+      .ibanner__description
+        margin-top .3em
+        font(2.0em)
+
+      .ibanner__button
+        margin-right -3em
+
+    &.mobile
+      //position absolute
+      left 0
+      width 100%
+
+      .ibanner
+        &__elements
+          padding 3em 4em 2.5em 4.5em
+          @media (max-width 860px)
+            font(11px)
+          @media (max-width 640px)
+            font(16px)
+          @media (max-width 414px)
+            font(13px)
+          @media (max-width 380px)
+            font(11px)
+
+        &__heading
+          font(6.5em, 500)
+
+        &__description
+          font(2.4em, 400, 1.5)
+
+        &__aside
+          -webkit-align-items center
+          align-items center
+
+        &__button-text
+          display none
+          font(600)
+
+        &__button-icon
+          width 5.5em
+          height 5.5em
+
+        &__button-icon:after
+          width 2em
+          height 2em
+
+    &.mobile-min
+      position relative
+      width 320px
+
+      .best-actions-timer
+        margin-top .9em
+        font(1.1em, 500, 1.1)
+
+        &::before
+          content 'До окончания:'
+          display block
+          background-image none
+
+        &__block::after
+          margin 0 .2em
+
+        &__icon
+          display none
+
+      .ibanner
+        -webkit-flex-direction column
+        flex-direction column
+        box-shadow 0 2px 2px -2px rgba(0, 0, 0, .1)
+
+        &__image
+          width auto
+
+        &__elements
+          width auto
+          -webkit-flex-direction row
+          flex-direction row
+          padding .7em 2em 1.5em
+
+        &__heading
+          font(3em)
+
+        &__description
+          font(1.3em, 500, 1.3)
+
+        &__text
+          padding-right 1em
+
+        &__aside
+          -webkit-flex 0 1 auto
+          flex 0 1 auto
+          min-width 7.2em
+          -webkit-flex-direction column
+          flex-direction column
+          -webkit-align-items flex-start
+          align-items flex-start
+          margin-top .6em
+          border-left 1px solid #f0f0f0
+          padding-left 1.5em
+
+        &__button-text
+          display none
+
+        &__button-icon
+          margin-left 0
+          width 2.2em
+          height 2.2em
+
+        &__button-icon:after
+          width 1em
+          height 1em
+
+  .ibanner
+    display -webkit-box
+    display -webkit-flex
+    display -ms-flexbox
+    display flex
+    position relative
+    cursor pointer
+    background-color #fff
+    overflow hidden
+
+    &__link
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+      z-index 1
+
+    &__image
+      -webkit-flex 0 0 auto
+      flex 0 0 auto
+      width 45.7%
+      background-position center
+      background-size cover
+      background-repeat no-repeat
+
+    &__image
+      &:after
+        content ''
+        display block
+        padding-bottom 68.75%
+
+    &__elements
+      position relative
+      -webkit-flex 1 1 auto
+      flex 1 1 auto
+      width 54.3%
+      display -webkit-box
+      display -webkit-flex
+      display -ms-flexbox
+      display flex
+      -webkit-flex-direction column
+      flex-direction column
+      padding 3em 3.5em 1.5em
+      font(11px, 500, initial)
+
+    &__heading
+      font(4.2em, 500, 1.2)
+      color #ff6060
+      display block
+      
+      &__text
+        font-size 100%
+
+    &__description
+      font(1.8em, 400, 1.5)
+      color #333333
+      white-space pre-line
+
+    &__text
+      -webkit-flex 1 1 auto
+      flex 1 1 auto
+
+    &__aside
+      display -webkit-box
+      display -webkit-flex
+      display -ms-flexbox
+      display flex
+      -webkit-align-items baseline
+      align-items baseline
+      -webkit-flex-direction row-reverse
+      flex-direction row-reverse
+
+    &__button
+      -webkit-flex 0 0 auto
+      flex 0 0 auto
+      display -webkit-box
+      display -webkit-flex
+      display -ms-flexbox
+      display flex
+      -webkit-align-items center
+      align-items center
+      margin-right -1.5em
+
+      &.best-actions-list__soon
+        display none
+
+    &__button-text
+      -webkit-flex 1 1 auto
+      flex 1 1 auto
+      font(1.6em, 500)
+      color #ff6060
+
+    &__button-icon
+      -webkit-flex 0 0 auto
+      flex 0 0 auto
+      position relative
+      margin-left 1.5em
+      border 1px solid transparent
+      width 3.8em
+      height 3.8em
+      border-radius 50%
+      background-color #ff6060
+
+    &__button-icon:after
+      content ''
+      position absolute
+      left 50%
+      top 50%
+      -webkit-transform translate(-60%, -50%) rotate(45deg)
+      -moz-transform translate(-60%, -50%) rotate(45deg)
+      -ms-transform translate(-60%, -50%) rotate(45deg)
+      -o-transform translate(-60%, -50%) rotate(45deg)
+      transform translate(-60%, -50%) rotate(45deg)
+      width 1.5em
+      height 1.5em
+      border-top .15em solid #fff
+      border-right .15em solid #fff
+
+    &__button:hover
+      text-decoration none
+
+    &__link:hover ~ .ibanner__elements .ibanner__button-icon
+      background-color transparent
+      border-color #ff6060
+
+    &__link:hover ~ .ibanner__elements .ibanner__button-icon:after
+      border-color #ff6060
+
+    &__timer
+      -webkit-flex 1 1 auto
+      flex 1 1 auto
+
+    &__timer .best-actions-timer
+        font(2em)
+
+    .best-actions-list__soon .best-actions-block::before
+      content ''
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+      z-index 3
+      &.ibanner__image
+        opacity .5
+      &.ibanner__elements
+        -webkit-filter grayscale(1)
+        filter grayscale(1)
+      &.best-actions-timer::before
+        content 'До начала '
+        width auto
+        background-image none
+
+  .best-actions-timer
+    font(2em, 500)
+    white-space nowrap
+
+    &_disabled
+      display none
+
+    &__icon
+      content ''
+      display inline-block
+      margin-right .3em
+      width 1.278em
+      height 1.278em
+      vertical-align middle
+      svg
+        width 100%
+        height 100%
+
+    &__block
+      display inline-block
+      &::after
+        content ''
+        display inline-block
+        margin 0 .3em
+        height .75em
+        border-right 1px solid #333
+        vertical-align middle
+      &:last-child::after
+        display none
+    &__value
+      display inline-block
+      vertical-align middle
+    &__unit
+      vertical-align middle
+
+  .form-section
+    border-radius 2px
+    display block
+    margin 0 auto
+    text-align center
+    width 98%
+    margin-bottom 2em
+    border 1px solid #ccc
+
+    &__header
+      color #333
+      text-align left
+      background-color #f5f5f5
+      border-color #ddd
+      padding 10px 15px
+      border-bottom 1px solid transparent
+      border-top-left-radius 3px
+      border-top-right-radius 3px
+
+  .form-select
+    display block
+    margin 0 auto
+    margin-bottom 20px
+    border-radius 2px
+    outline none
+    height 34px
+    padding 6px 12px
+    font(13px, 500, 1.42857143)
+    color #555
+    background-color #fff
+    background-image none
+    border 1px solid #ccc
+
+  .input-list
+    width 80%
+    margin 0 auto
+    text-align center
+    display table
+
+    &__row
+      display table-row
+
+    &__item
+      display table-cell
+      width 90%
+      transition all 0.3s
+      &[disabled]
+        background-color #f0f0f0
+        
+    &__item[type="number"]
+      width 70px
+
+    &__label
+      display table-cell
+      width 10%
+
+    &__cell
+      display table-cell
+      width 50%
+
+  .timer
+    width 6%
+    margin 0 auto
+    display table
+    text-align center
+    &__label
+      display table-cell
+      vertical-align middle
+    &__checkbox
+      display table-cell
+      width 15px
+      vertical-align middle
+      margin 0
+      margin-right 5px

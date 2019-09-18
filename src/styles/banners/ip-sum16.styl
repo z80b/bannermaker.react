@@ -1,0 +1,376 @@
+@import '../b-form'
+@import '../elements/*.styl'
+
+.ip-sum16
+
+  .banner-slide-wrap
+    padding 20px
+    border-radius 2px
+    display block
+    margin auto
+    margin-bottom 2em
+
+  .banner-slide-viewbox
+    min-width 320px
+    text-align left
+    margin 0 auto
+    width 960px
+
+    &.widescreen
+      width 1260px
+
+    &.mobile
+      position absolute
+      left 0
+      width 100%
+
+    &.mobile-min
+      position relative
+      width 320px
+
+  .ibanner
+    box-sizing content-box
+    background none
+
+    &__content
+      display flex
+      position relative
+      background-color #f5f5f5
+      text-decoration none
+
+    &__conditions
+      font-size 13px
+      padding-top 14px
+      color #aaa
+      line-height 1.5
+
+    &__image
+      flex 0 0 auto
+      width 448px
+      background-position center
+      background-size cover
+      background-repeat no-repeat
+
+    &__link
+      position absolute
+      width 100%
+      height 100%
+      top 0
+      left 0
+      z-index 2
+      cursor pointer
+
+    &__image:after
+      content ''
+      display block
+      padding-bottom 77%
+
+    &__elements
+      position relative
+      flex 1 1 auto
+      display flex
+      flex-direction column
+      padding 3.5em 3.5em 2.5em 5.5em
+      font-size 11px
+      line-height initial
+      &.widescreen
+        padding-right 4.5em
+
+    &__heading
+      margin-bottom .1em
+      font-size 5.2em
+      font-weight: 500;
+      color #ff6060
+
+    &__description
+      font-size 2em
+      font-weight: 500;
+      line-height 1.5
+      color #333333
+      white-space pre-line
+
+    &__text
+      flex 1 1 auto
+
+    &__aside
+      display flex
+      align-items baseline
+      flex-direction row-reverse
+
+    &__button
+      flex 0 0 auto
+      display flex
+      align-items center
+      margin-right -1.5em
+
+    &__button:hover
+      text-decoration none
+
+    &__button-text
+      flex 1 1 auto
+      font-size 1.6em
+      font-weight: 500;
+      color #333333
+
+    &__button-icon
+      flex 0 0 auto
+      position relative
+      margin-left 1em
+      background: #ff474d;
+      width 4em
+      height 4em
+      border-radius 50%
+
+    &__button-icon:after
+      content ''
+      position absolute
+      left 50%
+      top 50%
+      transform translate(-60%, -50%) rotate(45deg)
+      width 1.5em
+      height 1.5em
+      border-top .15em solid #fff
+      border-right .15em solid #fff
+
+    &__timer
+      flex 1 1 auto
+      font-size 1.9em
+      font-weight: 500;
+      white-space nowrap
+
+    &__timer-disabled
+      display none
+
+    &__timer-icon
+      display inline-block
+      margin-right .3em
+      width 1.25em
+      height 1.25em
+      vertical-align top
+
+    &__timer-icon > svg
+      width 100%
+      height 100%
+
+    &__timer-block
+      display inline-block
+
+    &__timer-block::before
+      content ''
+      display inline-block
+      margin 0 .3em
+      height .75em
+      border-right 1px solid #333
+      vertical-align middle
+
+    &__timer-block:first-of-type::before
+      display none
+
+    &__timer-block.hidden + &__timer-block::before
+      display none
+
+    &__timer-value
+      display inline-block
+      vertical-align middle
+
+    &__timer-unit
+      vertical-align middle
+
+    &__promocode-container
+      position relative
+      z-index 3
+
+    &__promocode b
+      font-weight bold
+
+    &__promocode-hint
+      position absolute
+      width 195px
+      color #333
+      background-color #fff
+      left 0
+      bottom 0
+      opacity 0
+      height 40px
+      font-size 13px
+      line-height 41px
+      text-align center
+
+      &:before
+        content ''
+        position absolute
+        left 50%
+        margin-left -10px
+        width 0
+        height 0
+        border-style solid
+
+    &__promocode
+      position relative
+      display inline-block
+      margin 20px 0 0
+      min-width 195px
+      height 40px
+      font-size 16px
+      line-height 41px
+      cursor move
+      text-align center
+      box-sizing border-box
+      padding 0 10px
+
+      &:hover
+        .ibanner__promocode-hint
+          transition bottom .15s ease, top .15s ease, opacity .3s ease-in
+          opacity 1
+
+          &.up
+            bottom 60px
+
+          &.down
+            top 60px
+
+      &.black
+        color #fff
+        background-color #222
+        .ibanner__promocode-hint
+          color #fff
+          background-color #222
+          &.up
+            &:before
+              bottom -10px
+              border-width 10px 10px 0 10px
+              border-color #222 transparent transparent transparent
+          &.down
+            &:before
+              top -10px
+              border-width 0 10px 10px 10px
+              border-color transparent transparent #222 transparent
+
+      &.white
+        background-color #fff
+        color #222
+        .ibanner__promocode-hint
+          background-color #fff
+          color #222
+          &.up
+            &:before
+              bottom -10px
+              border-width 10px 10px 0 10px
+              border-color #fff transparent transparent transparent
+          &.down
+            &:before
+              top -10px
+              border-width 0 10px 10px 10px
+              border-color transparent transparent #fff transparent
+
+
+  .form-section
+    border-radius 2px
+    display block
+    margin 0 auto
+    text-align center
+    width 98%
+    margin-bottom 2em
+    border 1px solid #ccc
+
+    &__header
+      color #333
+      text-align left
+      background-color #f5f5f5
+      border-color #ddd
+      padding 10px 15px
+      border-bottom 1px solid transparent
+      border-top-left-radius 3px
+      border-top-right-radius 3px
+
+  .form-select
+    display block
+    margin 0 auto
+    margin-bottom 20px
+    border-radius 2px
+    outline none
+    height 34px
+    padding 6px 12px
+    font-size 13px
+    line-height 1.42857143
+    color #555
+    background-color #fff
+    background-image none
+    border 1px solid #ccc
+
+  .input-list
+    width 80%
+    margin 0 auto
+    text-align center
+    display table
+
+    &__row
+      display table-row
+
+    &__item
+      display table-cell
+      width 90%
+      transition all 0.3s
+      &[disabled]
+        background-color #f0f0f0
+
+    &__label
+      display table-cell
+      width 10%
+
+    &__cell
+      display table-cell
+
+  .timer
+    width 6%
+    margin 0 auto
+    display table
+    text-align center
+    padding-bottom 24px
+    &__label
+      display table-cell
+      vertical-align middle
+      white-space nowrap
+    &__checkbox
+      display table-cell
+      width 15px
+      vertical-align middle
+      margin 0
+      margin-right 5px
+                
+
+.b-form__fieldset_settings
+    display block
+
+    .b-fieldset__body
+        text-align left
+        padding 10px 15px
+
+    .form-section__header
+      margin: 0;
+        
+    .b-fieldset__content
+        text-align left
+        display inline-block
+        width 190px
+        vertical-align top
+        margin-right 10px
+        
+    .b-fieldset__content_title 
+        width: 460px
+        
+    .form-select 
+        margin 0
+        
+    .b-field-checkbox
+        display inline
+        width 14px
+        height 14px
+        margin 0 0 0 3px
+        position relative
+        top 3px
+        
+    .b-field-textarea
+        width 400px
+        height 100px
+        font-size 13px

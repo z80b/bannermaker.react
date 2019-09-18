@@ -1,0 +1,256 @@
+@import '../mixins/*.styl'
+  
+.brand-group
+
+  .banner-slide-wrap
+    text-align center
+
+  .banner-slide-viewbox
+    //width 960px
+    margin 0 auto
+
+    .ip-brand-group
+      width 980px
+      position relative
+      padding 30px 10px 0px 10px
+      margin 0 auto 20px auto
+      background-color hsla(0,0%,100%,.9)
+
+      @media screen and (min-width 1206px)
+        width 1226px
+        padding 30px 10px 20px 10px
+        box-sizing border-box
+
+      &__links-wrapper
+        text-align center
+        margin-bottom 2em
+        position relative
+
+      .ip-brand-link__image
+        display inline-block
+        vertical-align top
+
+      .ip-brand-link
+        display inline-block
+        vertical-align top
+        position relative
+        height 100%
+        &:hover .ip-brand-link__overlay
+          opacity .15
+
+      .ip-brand-link__overlay
+        position absolute
+        left 0
+        top 0
+        width 100%
+        height 306px
+        opacity 0
+        background-color #333
+        transition opacity .25s ease
+
+      .ip-brand-link__logo-wrap
+        width 100%
+        position absolute
+        bottom 0
+        z-index 10
+        text-align center
+
+      .ip-brand-logo
+        background-repeat no-repeat
+        background-position center center
+        background-color #fff
+        display inline-block
+        vertical-align top
+        border 1px dashed #ccc
+        box-sizing border-box
+        font(16px, 500, 46px)
+        color #333
+
+      &__links
+        white-space nowrap
+        position absolute
+        top 0
+        height 100%
+        font-size 0
+
+      &.two-tiles
+
+        .ip-brand-link__image
+          height 306px
+          width 470px
+
+        .ip-brand-group__links
+          margin 0 -10px
+
+        .ip-brand-link
+          width 470px
+          margin 0 10px
+
+        .ip-brand-logo
+          width 390px
+          height 64px
+
+        .ip-brand-group__links-wrapper
+          height 330px
+
+        @media screen and (min-width 1206px)
+
+          .ip-brand-link__image
+            height 388px
+            width 592px
+          .ip-brand-link
+            width 592px
+
+          .ip-brand-logo
+            width 512px
+            height 64px
+
+          .ip-brand-link__image
+            width 592px
+            height 388px
+
+          .ip-brand-group__links
+            margin 0 -9px
+
+          .ip-brand-link
+            width 592px
+
+          .ip-brand-link__overlay
+            height 388px
+
+          .ip-brand-group__links-wrapper
+            height 428px
+
+
+      &.three-tiles
+
+        .ip-brand-link__image
+          height 306px
+          width 306px
+
+        .ip-brand-group__links
+          margin 0 -10px
+
+        .ip-brand-link
+          width 306px
+          margin 0 10px
+
+        .ip-brand-logo
+          width 266px
+          height 46px
+
+        .ip-brand-group__links-wrapper
+          height 330px
+
+        @media screen and (min-width 1206px)
+
+          .ip-brand-group .ip-brand-link__image
+            height 388px
+            width 388px
+
+          .ip-brand-group .ip-brand-link
+            width 388px
+
+          .ip-brand-group .ip-brand-logo
+            width 308px
+
+
+      &.four-tiles
+
+        .ip-brand-link__image
+          height 306px
+          width 224px
+
+        .ip-brand-group__links
+          margin 0 -10px
+
+        .ip-brand-link
+          width 224px
+          margin 0 10px 0 11px
+
+        .ip-brand-logo
+          width 140px
+          height 46px
+          font(16px, 500, 46px)
+
+        .ip-brand-group__links-wrapper
+          height 330px
+
+        @media screen and (min-width 1206px)
+          .ip-brand-group
+            height 428px
+
+          .ip-brand-group .ip-brand-link__image
+            width 288px
+            height 388px
+
+          .ip-brand-group .ip-brand-link
+            width 288px
+            margin 0 9px
+
+
+
+.form-section
+  border-radius 2px
+  display block
+  text-align center
+  width 98%
+  margin 2em auto
+  border 1px solid #ccc
+  &__header
+    color #333
+    text-align left
+    background-color #f5f5f5
+    border-color #ddd
+    padding 10px 15px
+    border-bottom 1px solid transparent
+    border-top-left-radius 3px
+    border-top-right-radius 3px
+
+  .form-select
+    display block
+    margin 0 auto
+    margin-bottom 20px
+    border-radius 2px
+    outline none
+    height 34px
+    padding 6px 12px
+    font-size 13px
+    line-height 1.42857143
+    color #555
+    background-color #fff
+    background-image none
+    border 1px solid #ccc
+
+  .input-list
+    width 100%
+    margin 0 auto
+    text-align center
+    display inline-flex
+
+    &__row
+      display table-row
+
+    &__item
+      display inline-block
+      width 90%
+      transition all 0.3s
+      &[disabled]
+        background-color #f0f0f0
+
+    &__label
+      display table-cell
+      width 1%
+
+    &__cell
+      display table-cell
+      width 100%
+
+
+.main-container
+  width 100%
+  background: none
+
+
+
+

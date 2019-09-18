@@ -1,19 +1,7 @@
 import React from 'react';
-//import data from './banner-list.json';
-const data = {
-  "banners": [
-    {
-      "name": "Выберите баннер",
-      "id": ""
-    },
-    {
-      "name": "Best Action",
-      "id": "best-action"
-    }
-  ]
-};
 
-function createBannersList() {
+const data = require('@/banner-list.json');
+const bannersList = (() => {
   let banners = [...data.banners];
   return banners.sort((a, b) => {
     if (a.id == '') return -1;
@@ -23,15 +11,13 @@ function createBannersList() {
     if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
     return 0;
   });
-}
-
-const bannersList = createBannersList();
+})();
 
 
 export const GetBannerName = (value) => {
   if (value.value !== '') {
     var Banner = require(`./banners/${value.value}.jsx`).default;
-    return (<Banner />)
+    return (<Banner />);
   }
   else {
     return null;

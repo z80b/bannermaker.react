@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Root from './root.jsx';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-//require("../styles/main.styl");
+import Root from '@/root.jsx';
+require("@/styles/main.styl");
 
 class Routers extends React.Component {
   render() {

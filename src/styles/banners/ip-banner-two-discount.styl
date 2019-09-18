@@ -1,0 +1,539 @@
+@import '../b-form'
+@import '../elements/*.styl'
+@import '../mixins/*.styl'
+
+.ip-banner-two-discount
+  width 100%
+  margin 0
+
+  .ibanner
+    padding 20px 0
+    width 98%
+    margin 0 auto
+
+    &__promocode
+      position absolute
+      z-index 2
+      width 195px
+      color #333
+      background-color #fff
+      cursor pointer
+      height 40px
+      right 25px
+      font(16px, 400, 41px)
+      top 50%
+      margin-top -20px
+
+      &.white
+        background-color #fff
+        color #333
+
+        &:hover
+          .ibanner__promocode-inner-wrap
+            color #fff
+
+        .ibanner__promocode-hover-wrapper
+          position: absolute
+          top 0
+          bottom 0
+          left 0
+          width 0
+          background-color #000
+          transition width .3s ease 0s
+        .ibanner__promocode-hint
+          background-color #fff
+          color #333
+          &:before
+            bottom -10px
+            border-width 10px 10px 0 10px
+            border-color #fff transparent transparent transparent
+
+      &.black
+        color #fff
+        background-color #333
+
+        &:hover
+          .ibanner__promocode-inner-wrap
+            color #000
+        .ibanner__promocode-hover-wrapper
+          position: absolute
+          top 0
+          bottom 0
+          left 0
+          width 0
+          background-color #fff
+          transition width .3s ease 0s
+        .ibanner__promocode-hint
+          color #333
+          background-color #fff
+          &:before
+            bottom -10px
+            border-width 10px 10px 0 10px
+            border-color #fff transparent transparent transparent
+
+    &-small-ip
+      width 100%
+      height 130px
+      overflow hidden
+      position relative
+      background #ef5c6e
+      -webkit-box-sizing border-box
+      -moz-box-sizing border-box
+      -o-box-sizing border-box
+      box-sizing border-box
+
+      &:hover
+        .ibanner__promocode-hint
+          transition bottom .15s ease, top .15s ease, opacity .3s ease-in
+          opacity 1
+          bottom 55px
+
+        .ibanner__promocode-hover-wrapper
+          width 100%
+
+        .ibanner__promocode.white .ibanner__promocode-inner-wrap
+            color #fff
+
+        .ibanner__promocode.black .ibanner__promocode-inner-wrap
+            color #000
+
+      &-discount
+        display inline-block
+        height 100%
+        /*border-left 1px solid #fff*/
+        text-align center
+        padding 0 65px
+
+        /*&:first-child
+          border-left none*/
+
+    &-small-ip__title
+      font(24px, 700, 1)
+      text-transform uppercase
+      letter-spacing 2px
+      margin 12px 0 10px
+
+    &-small-ip__subtitle
+      font(16px, 400, 18px)
+
+    &-small-ip-hinter
+      width 100%
+      height 100%
+      position absolute
+      top 0
+      left 0
+      z-index 1
+      background #ef5c6e
+      font(13px, 400, 16px)
+      color #fff
+      padding 25px 0 25px 25px
+      opacity 0
+      -webkit-box-sizing border-box
+      -moz-box-sizing border-box
+      -o-box-sizing border-box
+      box-sizing border-box
+      -webkit-transition opacity .2s ease
+      -moz-transition opacity .2s ease
+      -o-transition opacity .2s ease
+      transition opacity .2s ease
+
+    &-small-ip-hinter-inner
+      width 70%
+      overflow auto
+      height 100%
+      padding 0 12px 0 0
+      text-align left
+
+    &-small-ip__show-hinter,
+    &-small-ip__close-hinter
+      font(13px, 400, 1)
+      color #fff
+      border-bottom 1px solid #fff
+      position absolute
+      bottom 10px
+      right 25px
+      z-index 2
+      cursor pointer
+
+    &-menu
+      display table
+      width 100%
+      list-style-type none
+      padding 0
+      margin 0
+      font-size 0
+
+    &-menu__item
+      display table-cell
+      min-width 100px
+      border-left 1px solid #fff
+      position relative
+
+    &-menu__item:first-child
+      border-left 0
+
+    &-menu__link
+      display block
+      height 40px
+      padding 0
+      cursor pointer
+      text-decoration none
+      font(16px, 400, 40px)
+      color #333
+      text-align center
+      background #f1f1f1
+      position relative
+
+      -webkit-transition background .1s linear, border-color .1s linear
+      -moz-transition background .1s linear, border-color .1s linear
+      -o-transition background .1s linear, border-color .1s linear
+      transition background .1s linear, border-color .1s linear
+
+    &-menu__link:hover
+      background #888
+      color #fff
+
+    &__promocode b
+      font(600)
+
+    &__promocode-inner
+      position relative
+
+    &__promocode-inner-wrap
+      z-index 5
+      position relative
+      text-align center
+      transition color .3s ease 0s
+
+    &__promocode-hint
+      position absolute
+      width 195px
+      color #333
+      background-color #fff
+      left 0
+      bottom 0
+      opacity 0
+      height 25px
+      font-size 13px
+      line-height 25px
+      text-align center
+
+      &:before
+        content ''
+        position absolute
+        left 50%
+        margin-left -10px
+        width 0
+        height 0
+        border-style solid
+        
+/* width */
+.ibanner ::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+.ibanner ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+.ibanner ::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+.ibanner ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+  //form
+      
+    .form-group_promocode,
+    .form-group_promocode-style
+        width 200px
+        display inline-block
+
+  .form-section
+    border-radius 2px
+    display block
+    margin 0 auto
+    text-align center
+    width 98%
+    margin-bottom 2em
+    border 1px solid #ccc
+
+    &__header
+      color #333
+      text-align left
+      background-color #f5f5f5
+      border-color #ddd
+      padding 10px 15px
+      border-bottom 1px solid transparent
+      border-top-left-radius 3px
+      border-top-right-radius 3px
+
+  .form-select
+    display block
+    margin 0 auto
+    margin-bottom 20px
+    border-radius 2px
+    outline none
+    height 34px
+    padding 6px 12px
+    font-size 13px
+    line-height 1.42857143
+    color #555
+    background-color #fff
+    background-image none
+    border 1px solid #ccc
+
+  .add_button
+    margin-bottom 20px
+    background-color #5cb85c
+    border none
+    padding 5px 20px
+    outline none
+    color #fff
+    border-radius 3px
+    font-weight 400
+
+  .input-list
+    width 80%
+    margin 0 auto
+    text-align center
+    display table
+
+    &__checkbox
+      display table-cell
+      width 15px
+      vertical-align middle
+      margin 0
+      margin-right 5px
+
+    &__textarea
+      display table-cell
+      width 90%
+      outline none
+      height 50px
+      margin-bottom 27px
+
+    &__row
+      display table-row
+
+    &__item
+      display table-cell
+      width 90%
+      transition all 0.3s
+      &[disabled]
+        background-color #f0f0f0
+      &.number-input
+        width 22%
+
+    &__label
+      display table-cell
+      width 10%
+
+    &__cell
+      display table-cell
+      width 50%
+
+    &--three
+      margin 0 auto
+      text-align center
+      display table
+
+      .remove_button
+        display table-cell
+        float right
+        margin-top 5px
+        background-color #d9534f
+        border none
+        outline none
+        color #fff
+        border-radius 3px
+        font-weight 400
+
+      .input-list__cell
+        width 30%
+        float left
+        
+
+
+
+.ibanner-small-ip-hinter a {
+    color: inherit;
+    text-decoration: underline !important;
+}
+
+
+.ibanner-radio-seeconditions,
+.ibanner-radio-closeconditions,
+.ibanner-small-ip__close-hinter {
+    display: none;
+}
+
+.ibanner-radio-seeconditions:checked + .ibanner-radio-closeconditions + .ibanner-small-ip-hinter {
+    opacity: 1;
+}
+
+.ibanner-radio-seeconditions:checked + .ibanner-radio-closeconditions + .ibanner-small-ip-hinter + label .ibanner-small-ip__show-hinter {
+    display: none;
+}
+
+.ibanner-radio-seeconditions:checked + .ibanner-radio-closeconditions + .ibanner-small-ip-hinter + label + label .ibanner-small-ip__close-hinter {
+    display: block;
+}
+
+.ibanner-radio-closeconditions:checked + .ibanner-small-ip-hinter {
+    opacity: 0;
+}
+
+.ibanner-radio-closeconditions:checked + .ibanner-small-ip-hinter + label .ibanner-small-ip__show-hinter {
+    display: block;
+}
+
+.ibanner-radio-closeconditions:checked + .ibanner-small-ip-hinter + label + label .ibanner-small-ip__close-hinter {
+    display: none;
+}
+
+
+.b-field-link__label--switch {
+  line-height: 42px;
+  margin: 0 20px 0 0;
+}
+
+.b-switcher__input--radio {
+  width: 15px;
+  float: left;
+  margin: 3px 4px 0 0;
+}
+
+.input-buttons {
+  width: 25%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.button-data {
+  position: relative;
+}
+
+.ibanner-small-ip_threediscount .ibanner-small-ip-discount {
+  padding: 0 40px;
+}
+
+.ibanner-small-ip_threediscount .ibanner-small-ip__title {
+  font-size: 24px;
+}
+
+.b-fieldset {
+  margin: 0 10px 10px;
+}
+
+.b-fieldset_titles {
+  background: hsla(0,0%,100%,.7);
+  margin-top: 10px;
+}
+
+.b-field__checkbox_title3 {
+  display: inline-block;
+  width: 20px;
+  margin: 0;
+  height: auto;
+}
+
+.b-fieldset_titles .b-fieldset__body {
+  display: inline-block;
+  width: 33%;
+}
+
+@media (max-width: 1206px) {
+  .main-container {
+    width: 960px;
+  }
+  
+  .ibanner-small-ip_threediscount .ibanner-small-ip-discount {
+      padding: 0 18px;
+  }
+
+  .ibanner-small-ip_threediscount .ibanner-small-ip-discount:first-child {
+      margin-left: 30px;
+  }
+
+  .ibanner-small-ip_threediscount .ibanner-small-ip__title {
+      font-size: 16px;
+  }
+
+  .ibanner-small-ip_threediscount .ibanner-small-ip__subtitle {
+      font-size: 13px;
+  }
+}
+
+.b-form__fieldset_settings
+    display block
+
+    .b-fieldset__body
+        text-align left
+        padding 10px 15px
+
+    .form-section__header
+      margin: 0;
+        
+    .b-fieldset__content
+        text-align left
+        display inline-block
+        width 190px
+        vertical-align top
+        margin-right 10px
+        
+    .b-fieldset__content_title 
+        width: 460px
+        
+    .form-select 
+        margin 0
+        
+    .b-field-checkbox
+        display inline
+        width 14px
+        height 14px
+        margin 0 0 0 3px
+        position relative
+        top 3px
+        
+    .b-field-textarea
+        width 400px
+        height 100px
+        font-size 13px
+        
+/* Test css grid */
+.b-form__fieldset_buttons-grid {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2vw;
+}
+
+.buttons-grid-item {
+  font-size: 1rem;
+  padding: 1em;
+  background: #f9eeb3;
+  text-align: left;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: auto 1fr;
+  grid-area: 1;
+  align-items: center;
+  grid-auto-rows: 1fr;
+}
+
+.buttons-grid-item__label {
+  margin: 0;
+  padding: 0;
+}
+
+.buttons-grid-item__radio {
+  margin: 0 10px 0 0;
+  padding: 0;
+  width: auto;
+}

@@ -1,0 +1,461 @@
+@import '../b-form'
+@import '../elements/*.styl'
+@import '../mixins/*.styl'
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+.ip-banner-separate-discounts {
+  width: 100%;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.ibanner {
+  display: table;
+  width: 100%;
+  height: 230px;
+  background: #ef5c6e;
+}
+
+.ibanner-discount {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+  height: 114px;
+  color: #fff;
+}
+
+.ibanner-discount:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.ibanner-discount:before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 110px;
+  background: #fff;
+  position: absolute;
+  top: 91px;
+  left: 0;
+}
+
+
+.ibanner-discount:first-child:before {
+  display: none;
+}
+
+.ibanner__title {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 42px;
+    text-transform: uppercase;
+    padding-top: 0;
+    color: #fff;
+    margin: 0 0 5px 0;
+}
+
+.ibanner__subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #fff;
+    white-space: pre;
+    padding-bottom: 11px;
+}
+
+.ibanner__show-hinter {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #fff;
+  text-decoration: underline;
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  text-align: center;
+}
+
+.ibanner-discount-inner {
+  display: inline-block;
+  width: 210px;
+  height: 110px;
+  position: relative;
+  margin-top: 48px;
+}
+
+.promo { 
+  display: inline-block;
+  width: 387px;
+  text-align: left;
+}
+
+.promo-code-text {
+  display: inline-block;
+  margin-right: 10px;
+  padding-top: 21px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.promo-code-container {
+  display: inline-block;
+}
+
+.ibanner__promocode {
+  width: 129px;
+  color: #333;
+  background-color: #fff;
+  cursor: pointer;
+  height: 34px;
+  font-size: 16px;
+  line-height: 34px;
+}
+
+.ibanner__promocode-inner {
+  position: relative;
+}
+
+.ibanner__promocode-inner-wrap {
+  z-index: 5;
+  position: relative;
+  text-align: center;
+}
+
+.ibanner__promocode-hint {
+  position: absolute;
+  width: 195px;
+  color: #333;
+  background-color: #fff;
+  left: -34px;
+  bottom: 0;
+  opacity: 0;
+  height: 25px;
+  font-size: 13px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.ibanner__promocode b {
+    font-weight: 700;
+}
+
+
+.ibanner__promocode-hint:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.ibanner__promocode:hover .ibanner__promocode-hint {
+  transition: bottom .15s ease,top .15s ease,opacity .3s ease-in;
+  opacity: 1;
+  bottom: 47px;
+}
+
+.ibanner__promocode .ibanner__promocode-hint:before {
+  bottom: -10px;
+  border-width: 10px 10px 0;
+  border-color: #fff transparent transparent;
+}
+
+.countdown
+    position absolute
+    left 0
+    top 0
+    font(16px, 400)
+    text-align center
+    color #000
+    letter-spacing .015em
+    cursor move
+    
+    &__title
+        display block
+        height 22px
+        line-height 22px
+        white-space nowrap
+        
+    &__value
+        display inline-block
+        line-height 36px
+        margin-left 5px
+        font(600)
+        text-align left
+        white-space nowrap
+        
+        &::after
+            padding-left 1px
+            font(400)
+            
+        &_days
+            margin-left 0
+            
+            &::after
+                content 'д'
+            258px
+        &_hours::after
+            content 'ч'
+            
+        &_minutes::after
+            content 'м'
+            
+        &_seconds
+            display inline-block
+            width 41px
+            
+            &::after
+                content 'с'
+                
+        &_hidden
+            display none
+            
+        &::before
+            content ''
+            display inline-block
+            height 15px
+            border-left 1px solid #000
+            margin-right 20px
+            
+        &:first-child::before
+            display none
+      
+
+.countdown {
+  display: inline-block !important;
+  width: auto !important;
+  transform: translate(0px, 0px) !important;
+  margin-left: 0 !important;
+  margin-top: 11px;
+  left: 0;
+  position: static !important;
+}
+
+.countdown__title,
+.countdown-values {
+  display: inline-block;
+}
+
+.countdown__title {
+  margin-right: 10px;
+}
+
+.countdown__value:before {
+  display: none;
+}
+
+.ibanner-top-things {
+  position: absolute;
+  top: 13px;
+  left: 50%;
+  width: 800px;
+  margin-left: -400px;
+  text-align: center;
+}
+
+
+  //form
+
+  .form-section
+    border-radius 2px
+    display block
+    margin 30px auto 2em
+    text-align center
+    width 98%
+    border 1px solid #ccc
+    clear both
+
+    &__header
+      color #333
+      text-align left
+      background-color #f5f5f5
+      border-color #ddd
+      padding 10px 15px
+      border-bottom 1px solid transparent
+      border-top-left-radius 3px
+      border-top-right-radius 3px
+
+  .form-select
+    display block
+    margin 0 auto
+    margin-bottom 20px
+    border-radius 2px
+    outline none
+    height 34px
+    padding 6px 12px
+    font-size 13px
+    line-height 1.42857143
+    color #555
+    background-color #fff
+    background-image none
+    border 1px solid #ccc
+
+  .add_button
+    margin-bottom 20px
+    background-color #5cb85c
+    border none
+    padding 5px 20px
+    outline none
+    color #fff
+    border-radius 3px
+    font(400)
+
+  .input-list
+    width 80%
+    margin 0 auto
+    text-align center
+    display inline-flex
+
+    &__checkbox
+      display table-cell
+      width 15px
+      vertical-align middle
+      margin 0
+      margin-right 5px
+
+    &__textarea
+      display table-cell
+      width 90%
+      outline none
+      height 104px
+      margin-bottom 27px
+
+      &.promo-area
+        width 18%
+        height 34px
+
+    &__row
+      display table-row
+      margin 0 auto
+
+    &__item
+      display table-cell
+      width 90%
+      transition all 0.3s
+      &[disabled]
+        background-color #f0f0f0
+      &.number-input
+        width 22%
+
+    &__label
+      display table-cell
+      width 1%
+
+    &__cell
+      display block
+      vertical-align middle
+      margin 0 auto
+
+    &--three
+      margin 0 auto
+      text-align center
+      display table
+
+      .remove_button
+        display table-cell
+        float right
+        margin-top 5px
+        background-color #d9534f
+        border none
+        outline none
+        color #fff
+        border-radius 3px
+        font(400)
+
+      .input-list__cell
+        width 30%
+        float left
+        
+
+.b-fieldset--timer .b-form__field {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.b-fieldset--timer .b-fieldset__row {
+  width: 220px;
+  margin: 0 auto;
+}
+
+.b-fieldset--timer .b-field__checkbox[name="centred"],
+.b-fieldset--timer .b-field__checkbox[name="centred"] + label,
+.b-fieldset--timer .b-form__field + .b-form__field,
+.b-fieldset--timer .b-field--size {
+  display: none;
+}
+
+.b-fieldset--timer .b-field__checkbox[name="active"],
+.b-field__checkbox {
+  width: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: -2px 5px 0;
+}
+
+.b-field__checkbox[name="promoState"] {
+  margin: -4px 2px 0;
+}
+
+.b-fieldset--timer .b-field--color {
+  display: block !important;
+}
+
+.b-field--color .b-field__input {
+  display: none;
+}
+
+input[type="color"] {
+  width: 215px;
+}
+
+
+.b-fieldset
+    border none
+    
+.b-form__fieldset_settings
+    display block
+
+    .b-fieldset__body
+        text-align left
+        padding 10px 15px
+
+    .form-section__header
+      margin: 0;
+        
+    .b-fieldset__content
+        text-align left
+        display inline-block
+        width 190px
+        vertical-align top
+        margin-right 10px
+        
+    .b-fieldset__content_title 
+        width: 460px
+        
+    .form-select 
+        margin 0
+        
+    .b-field-checkbox
+        display inline
+        width 14px
+        height 14px
+        margin 0 0 0 3px
+        position relative
+        top 3px
+        
+    .b-field-textarea
+        width 400px
+        height 100px
+        font-size 13px

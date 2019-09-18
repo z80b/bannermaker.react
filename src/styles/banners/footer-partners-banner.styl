@@ -1,0 +1,333 @@
+@import '../mixins/*.styl'
+    
+.main-container
+    width 100%
+    background none
+
+.bannermaker.footer-partners-banner
+    width 1226px
+    padding 20px 20px 40px
+    box-sizing border-box
+    background hsla(0,0%,100%,.9)
+    margin 0 auto
+
+    .images-section 
+
+        input:disabled
+            border 1px solid #ccc
+            
+        
+    .links-section 
+        .link-block
+            margin-bottom 40px
+        
+    
+    .mark-up__button 
+        .btn
+            transition all 0.2s ease
+            display block
+            width 200px
+            margin 0 auto  
+
+    .preview-block
+        background-color #fff
+
+    .markup-block
+        display none
+        padding-bottom 20px
+
+        textarea
+            width 94%
+            margin-left 3%
+            resize vertical
+
+    .banners-config-wrapper
+        margin-bottom 20px
+        background-color #fff
+        border 1px solid transparent
+        border-radius 4px
+        -webkit-box-shadow 0 1px 1px rgba(0,0,0,.05)
+        box-shadow 0 1px 1px rgba(0,0,0,.05)
+
+        &.disabled
+            > *:not(.banners-config-wrapper__heading)
+                opacity 0.2
+
+        &.required
+            border-color #ddd
+
+            .banners-config-wrapper__heading
+                color #333
+                background-color #f5f5f5
+                border-color #ddd
+
+
+        &__heading
+            position relative
+            padding 10px 15px
+            border-bottom 1px solid transparent
+            border-top-left-radius 3px
+            border-top-right-radius 3px
+
+        &__buttons
+            float right
+
+        &__form
+            border-radius 4px
+            padding 15px
+
+            &__row
+                margin-bottom 15px
+                display block
+                margin-bottom 0
+                color #1759A1
+                font-weight 700
+
+                &_images
+                    .has-error 
+                        .banners-config-wrapper__form__link
+                            .banners-config-wrapper__form__input
+                                background-color inherit
+
+                            .banners-config-wrapper__form__link.disabled
+                                background-color #eee
+
+                            .banners-config-wrapper__form__checkbox-block
+                                color #555
+                                background-color #eee
+                                border-color #ccc
+
+                    .banners-config-wrapper__form__input.disabled
+                        border 1px solid #ccc
+
+            &__image, &__link
+                width: 33.3%
+
+            &__input
+                display block
+                width 100%
+                height 34px
+                padding 6px 12px
+                font-size 13px
+                line-height 1.4
+                color #555
+                background-color #fff
+                border 1px solid #ccc
+                border-radius 2px
+                -webkit-box-shadow inset 0 1px 1px rgba(0,0,0,.075)
+                box-shadow inset 0 1px 1px rgba(0,0,0,.075)
+                -webkit-transition border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s
+                -o-transition border-color ease-in-out .15s,box-shadow ease-in-out .15s
+                transition border-color ease-in-out .15s,box-shadow ease-in-out .15s
+                transition all .5s
+
+            &__checkbox-block
+                padding 6px 12px
+                font-size 13px
+                font-weight 400
+                line-height 1
+                color #555
+                text-align center
+                background-color #eee
+                border 1px solid #ccc
+                border-radius 4px
+
+                .banners-config-wrapper__form__input
+                    cursor pointer
+
+        
+    img
+        vertical-align middle
+
+    .banner-preview
+        margin 30px 0
+
+        &__blocks
+            text-align center
+
+            &__row
+                margin 20px 0 40px 0
+
+            &__title
+                font-size 13px
+                line-height 18px
+                font-family "Helvetica Neue",Arial,sans-serif
+                margin-top 10px
+                color #aaa
+
+
+        &__block
+            &_image
+                display inline-block
+                vertical-align middle
+                margin 0 20px
+
+                &:hover
+                    .banner-preview__image_link
+                        display none
+
+                    .banner-preview__image_link_colored
+                        display block
+
+                    .banner-preview__image_nolink
+                        display none
+
+                    .banner-preview__image_nolink_colored
+                        display block
+
+
+        &__image
+
+            &_link
+                display block
+
+            &_link_colored
+                display none
+
+            &_nolink_colored
+                display none
+
+        &__link
+            color #777
+            transition color .2s linear
+
+            &-block
+                display inline-block
+                margin 0 10px
+
+
+
+.footer-partners-banner-config
+
+    .b-fieldset
+        border 1px solid rgba(0,0,0,.1)
+        border-radius 5px
+        overflow hidden
+        margin 0 0 20px
+        position relative
+
+        &__title
+            font(16px, 700, 1.2)
+            color #333
+            background hsla(0,0%,96%,.7)
+            text-align left
+            padding 10px 15px
+            padding-left 35px
+
+        &__body
+            padding 10px 15px
+            background: hsla(0,0%,100%,.7)
+
+        .label
+            font-weight 700
+
+        &__button
+            display inline-block
+            border 2px solid #5cb85c
+            border-radius 50%
+            background #fff
+            box-sizing border-box
+            color #5cb85c
+            font(24px, 700, 1)
+            padding 0
+            margin 0
+            width 24px
+            height 24px
+            vertical-align middle
+            box-shadow 1px 1px 5px rgba(0,0,0,.5)
+            transition all .3s ease
+            outline none
+            float right
+
+            &:hover
+                color #fff
+                background #5cb85c
+
+            &_del
+                position absolute
+                right -2px
+                top -2px
+                color #d43f3a
+                border-color #d43f3a
+                font-size 16px
+
+                &:hover
+                    background #d43f3a
+
+
+        &__content
+            position relative
+            padding 15px
+            margin 20px 0
+            background hsla(0,0%,96%,.7)
+
+    .b-field
+        &-link
+            .b-field__switcher
+                padding 5px
+                line-height 1
+                display table-cell
+                background #eee
+
+                &:first-child
+                    border-right: 1px solid #ccc
+
+            .b-field__block
+                display table
+                border 1px solid #ccc
+                border-radius 4px
+                margin 0 0 20px
+                overflow hidden
+                width 100%
+
+            .b-field__input
+                margin 0
+                border 0
+                &[disabled]
+                    background-color #eee
+
+            .b-field__switcher
+                width 2em
+                padding 6px 12px
+
+    .b-switcher__input
+        height auto
+        width auto
+        display inline-block
+        margin 0
+
+    .b-form__field.b-field--checkbox
+        position absolute
+        top -3px
+        left 15px
+        z-index 2
+
+        .b-field__checkbox
+            width auto
+
+    .b-markup-button 
+        display block
+        width 150px
+        margin 20px auto 0
+
+    .b-form__fieldset.optional
+        .b-fieldset__body
+            opacity .2
+
+            .b-fieldset__body
+                opacity 1
+
+        &.active
+            .b-fieldset__body
+                opacity 1
+
+                .b-fieldset__body
+                    opacity 1
+
+
+
+
+
+
+
+

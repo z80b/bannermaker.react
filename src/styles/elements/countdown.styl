@@ -1,0 +1,60 @@
+@import '../../styles/mixins/*.styl'
+
+.countdown
+    position absolute
+    left 0
+    top 0
+    font(24px, 400, 28px)
+    text-align center
+    color #000
+    letter-spacing .015em
+    cursor move
+    
+    &__title
+        display block
+        height 22px
+        line-height 22px
+        white-space nowrap
+        
+    &__value
+        display inline-block
+        font(400, 36px)
+        margin-left 12px
+        text-align left
+        white-space nowrap
+        
+        &::after
+            padding-left 6px
+            font(400)
+            
+        &_days
+            margin-left 0
+            
+            &::after
+                content 'д'
+            
+        &_hours::after
+            content 'ч'
+            
+        &_minutes::after
+            content 'м'
+            
+        &_seconds
+            display inline-block
+            width 41px
+            
+            &::after
+                content 'с'
+                
+        &_hidden
+            display none
+            
+        &::before
+            content ''
+            display inline-block
+            height 15px
+            border-left 1px solid #000
+            margin-right 20px
+            
+        &:first-child::before
+            display none

@@ -1,0 +1,221 @@
+@import '../b-form'
+@import '../elements/*.styl'
+
+.bm-preview {
+    padding: 15px;
+}
+
+.b-products-banner {
+    position: relative;
+    color: #fff;
+    font-size: 13px;
+    background: #f45057;
+    border-bottom: 1px solid #eee;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 26px 15px 50px 15px;
+    padding-bottom: 40px;
+}
+.b-products-banner--paddingBottom {
+    padding-bottom: 26px;
+}
+.b-products_not-found .b-products-banner {
+    margin: -15px -15px 15px -15px;
+}
+.b-products-banner__tab {
+    position: relative;
+    background: #f45057;
+    line-height: 1.7;
+    display: none;
+}
+
+.b-products-banner__title {
+    padding-top: 10px;
+    font(40px, 700, 15px)
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.b-products-banner__subtitle {
+    font(16px, 700, 15px)
+    text-transform: uppercase;
+    margin-bottom: 9px;
+    text-align: center;
+}
+
+.b-products-banner__description {
+    font(16px, 400, 1.5);
+    -moz-user-select: none;
+    user-select: none;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.b-products-banner__description--bold {
+    font(600)
+}
+
+.b-products-banner__conditions {
+    display: block;
+    padding: 0 0 11px 0;
+    margin: 0;
+    font(16px, 400, 17px)
+    z-index: 1;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+
+.b-products-banner__arrow {
+    vertical-align: middle;
+    position: relative;
+    width: 16px;
+    height: 10px;
+    position: absolute;
+    bottom: 8px;
+    right: 15px;
+}
+
+.b-products-banner__arrow_before,
+.b-products-banner__arrow_after {
+    display: block;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top-color: #E83841;
+    border-bottom: 0;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    z-index: 1;
+}
+
+.b-products-banner__arrow_after {
+    border-top-color: #ffffff;
+    top: 0;
+    z-index: 0;
+}
+
+.b-products-banner__coupon {
+    width: 80%;
+    background: #fff;
+    color: #000;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    padding: 11px 28px;
+}
+
+.b-products-banner__coupon--text {
+    font(600)
+}
+
+
+
+#banner-conditions {
+    display: none;
+}
+
+#banner-conditions:checked + .b-products-banner__tab {
+    display: block;
+}
+
+#banner-conditions:checked + .b-products-banner__tab + .b-products-banner-info {
+    display: none;
+}
+
+#banner-conditions:checked + .b-products-banner__tab + .b-products-banner-info + .b-products-banner__conditions + .b-products-banner__arrow {
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+/*form*/
+.form-section {
+    margin-top: 70px;
+    padding: 20px;
+    background: #fff;
+}
+
+.b-form__fieldset {
+    padding: 20px;
+    margin: 15px 0;
+}
+
+.input-list {
+    display: table;
+    width: 100%;
+    margin: 0 0 30px;
+}
+
+.input-list__cell {
+    display: block;
+    width: 180px;
+    float: left;
+    margin: 0 10px;
+}
+
+.input-list__label {
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+.input-list__checkbox,
+.input-list__number {
+    width: 15px;
+    display: inline-block;
+    vertical-align: top;
+    height: 21px;
+    margin: 0;
+}
+
+.input-list__number {
+    width: 85px;
+}
+
+.input-list__cell_w340 {
+    width: 340px;
+}
+
+input[type=checkbox], input[type=radio] {
+    margin: 0;
+}
+
+.b-fieldset__left {
+    position: relative;
+    width: 30%;
+    display: inline-block;
+    padding: 0 20px 20px 0;
+}
+
+.b-fieldset__title {
+    margin: 10px 0;
+}
+
+.b-switcher__input.b-switcher__input--button-hover {
+    margin: 0 5px 0 0;
+    position: relative;
+    top: 2px;
+}
+
+.b-field__checkbox--promocod {
+    width: 20px;
+}
+
+.input-list__cell--version {
+    width: 120px;
+}
+
+.input-list__item--textarea {
+    font-size: 13px;
+    width: 170px;
+    height: 100px;
+}
+
+.input-list__cell--promocod {
+    width: 100px;
+}

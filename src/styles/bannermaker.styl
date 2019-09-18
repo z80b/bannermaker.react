@@ -1,0 +1,262 @@
+body
+  overflow-y scroll
+  background-color #222
+  background-size cover
+  min-height 100vh
+  font-family 'CoFo Sans LaModa', sans-serif
+  font-size 13px
+  font-weight 500
+  &.dynamicBackgroundImage
+    background url(https://unsplash.it/1366/768/?random) #222 no-repeat top center
+    background-size cover
+
+  &.boring
+    &:before,
+    &:after
+        background-image none
+        background-color grey
+
+  &.h9maya
+    background-image url("/static/img/9-maya.jpg")
+    background-color rgba($h9maya, 0.7)
+    background-size 100% 100%
+
+.btn,
+.form-control
+  border-radius 2px
+
+.header-container
+  font-size 0
+  margin 0 0 17px
+  text-align center
+
+.header-container__inner
+  text-align left
+  display inline-block
+
+select
+textarea
+  outline-color #ad4e5e
+
+.logo-title
+  box-sizing border-box
+  margin 0
+  display inline-block
+  vertical-align top
+  padding 0 0 0 16px
+  background-color rgba(#ad4e5e, $logo-opacity)
+  color #fff
+  font-size 24px
+  letter-spacing .25px
+  border-bottom-left-radius $border-radius
+  border-top-left-radius $border-radius
+  height 53px
+  line-height 51px
+  
+  &__link
+  &__link:hover
+    color inherit
+    text-decoration none
+  span
+    display inline-block
+    font-weight normal
+    position relative
+    font-size 13px
+    top -1em
+    left .1em
+
+.banner-chooser
+  display inline-block
+  vertical-align top
+  background-color rgba(#ad4e5e, $logo-opacity)
+  padding 10px 16px 0 19px
+  margin-top 0
+  border-bottom-right-radius $border-radius
+  border-top-right-radius $border-radius
+  box-sizing border-box
+  height 53px
+
+.plain-chooser
+    display inline-block
+    vertical-align top
+    background-color rgba(#ad4e5e, $logo-opacity)
+    padding: 0 16px 0 0
+    margin-top 0
+    border-bottom-right-radius $border-radius
+    border-top-right-radius $border-radius
+    box-sizing border-box
+    height 53px
+    font-size 24px
+    letter-spacing 0.25px
+    color: #fff
+    line-height 51px
+
+.plain-chooser:hover
+    color: #fff
+    text-decoration: none
+
+.banner-selector
+  width 470px
+  font-size 16px
+  height 32px
+  border 0
+
+.banner-container
+  width 100%
+
+.header-container__inner
+  -webkit-animation-duration 1s
+  animation-duration 1s
+  -webkit-animation-fill-mode both
+  animation-fill-mode both
+  -webkit-animation-name bounceInDown
+  animation-name bounceInDown
+
+.form-control
+  transition all .5s
+
+.buttons
+  margin-bottom 1em
+
+.main-container
+  border-radius 5px
+  margin 0 auto
+  width 90%
+  background-color rgba(#fff, .9)
+  position relative
+  padding-bottom 12px
+
+.basic-input
+  margin 0 auto
+  margin-bottom 20px
+  display block
+  width 50%
+
+input
+  margin 0 auto
+  margin-bottom 20px
+  display block
+  width 100%
+  border-radius 2px
+  outline none
+  height 34px
+  padding 6px 12px
+  font-size 13px
+  line-height 1.42857143
+  color #555
+  background-color #fff
+  background-image none
+  border 1px solid #ccc
+
+label
+  font-weight 500
+  display inline-block
+  max-width 100%
+  margin-bottom 5px
+  color #1759A1
+
+.label-error
+  color #f87777
+  display block
+
+.error-input
+  border 1px solid #f87777
+
+.error-button
+  background-color #f87777
+  color #eeebeb
+  pointer-events none
+  &:hover
+    background-color #f87777
+    color #eeebeb
+
+.code-field-wrapper
+  padding-bottom 40px
+
+.code-field
+  background-color #272822
+  width 80%
+  border-radius 5px
+  margin 0 auto
+  white-space pre-line
+  color #f8f8f2
+  padding 0 0 22px 30px
+  font-weight 400
+  letter-spacing 1px
+
+.help-wrapper
+  text-align left
+  margin-left 12%
+
+.banner-input
+  width 50%
+  margin 0 auto
+
+.j-set-bg
+  font-weight 100
+  padding-left 3px
+
+.btn
+  margin 0 0 20px
+  outline none
+
+  &-download
+    text-align center
+
+@-webkit-keyframes bounceInDown {
+    0%, 60%, 75%, 90%, 100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -3000px, 0);
+        transform: translate3d(0, -3000px, 0);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 25px, 0);
+    }
+    75% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0);
+    }
+    100% {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes bounceInDown {
+    0%, 60%, 75%, 90%, 100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -3000px, 0);
+        transform: translate3d(0, -3000px, 0);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 25px, 0);
+    }
+    75% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+    }
+    90% {
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0);
+    }
+    100% {
+        -webkit-transform: none;
+        transform: none;
+    }
+}

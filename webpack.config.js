@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path              = require('path');
 
 module.exports = {
   entry: __dirname + "/src/app.jsx",  // webpack entry point. Module to start building dependency graph
@@ -12,11 +13,22 @@ module.exports = {
     port: 3000, // port to run dev-server
   },
 
+  resolve: {
+    extensions: [ ".js", ".jsx" ],
+    // root: path.resolve(__dirname, 'src'),
+    alias: {
+      "@": path.resolve(__dirname, 'src'),
+      "@components": path.resolve(__dirname, 'src/components'),
+      "@banners": path.resolve(__dirname, 'src/banners'),
+    }
+  },
+
   module: {
     rules: [
       {
         test: /.\jsx$/,
         exclude: /node_modules/,
+        // include: [helpers.root('src')],
         use: {
           loader: "babel-loader",
           query: {
@@ -25,11 +37,20 @@ module.exports = {
         }
       },
       {
-        test: /.\json$/,
+        test: /\.styl$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'json-loader'
-        }
+        // include: [helpers.root('src')],
+        use: [
+          "style-loader", // creates style nodes from JS strings
+          "css-loader", // translates CSS into CommonJS
+          "stylus-loader" // compiles Stylus to CSS
+        ]
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        use: [
+          "file-loader"
+        ]
       }
     ]
   },

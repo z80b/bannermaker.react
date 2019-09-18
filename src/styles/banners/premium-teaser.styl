@@ -1,0 +1,183 @@
+@import '../mixins/*.styl'
+
+.premium-teaser-wrapper {
+    width: 100%;
+    padding: 20px 0 0;
+}
+
+.premium-teaser {
+    width: 306px;
+    height: 390px;
+    display: block;
+    position: relative;
+    padding-bottom: 53px;
+    margin: 0 auto;
+}
+
+/*.html_wide*/ .premium-teaser {
+    width: 388px;
+    height: 465px;
+}
+
+.premium-teaser__item,
+.premium-teaser__item:hover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    
+}
+/*.html_wide*/.premium-teaser__item {
+    height: 100%;
+}
+
+.premium-teaser__image {
+    width: 100%;
+    height: 300px;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.premium-teaser__text {
+    width: 100%;
+    padding: 16px 0 21px;
+    text-align: center;
+    margin: auto;
+    z-index: 2;
+}
+
+.premium-teaser__title {
+    font(16px, 700, 1);
+    color: #222;
+    margin: 0;
+}
+
+.premium-teaser__subtitle {
+    font-size: 13px;
+    line-height: 1;
+    overflow: hidden;
+    padding: 10px 0 16px;
+    color: #111;
+    margin: 0;
+}
+
+.premium-teaser__button {
+    width: 156px;
+    height: 32px;
+    font(13px, 500, 32px);
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    transition: all .2s linear;
+    background-color: #222;
+    border: 1px solid #222;
+    border-radius: 3px;
+    display: block;
+    padding: 0;
+    margin: 5px auto 0;
+    text-decoration: none !important;
+}
+
+.premium-teaser:hover .premium-teaser__button,
+.premium-teaser__button:hover {
+    background-color: #000;
+}
+
+
+
+/*form*/
+.form-section {
+    margin-top: 70px;
+    padding: 0 20px;
+}
+
+.input-list {
+    display: table;
+    width: 100%;
+    margin: 0 0 30px;
+}
+
+.input-list__cell {
+    display: block;
+    width: 180px;
+    float: left;
+    margin: 0 10px;
+}
+
+.input-list__label {
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+.input-list__checkbox,
+.input-list__number {
+    width: 15px;
+    display: inline-block;
+    vertical-align: top;
+    height: 21px;
+    margin: 0;
+}
+
+.input-list__number {
+    width: 75px;
+}
+
+.input-list__cell_w340 {
+    width: 340px;
+}
+
+input[type=checkbox], input[type=radio] {
+    margin: 0;
+}
+
+.b-fieldset--timer .b-form__field {
+    width: 200px;
+}
+
+.b-fieldset--timer .b-fieldset__row {
+    width: 220px;
+}
+
+.b-fieldset--timer .b-field__checkbox[name="centred"],
+.b-fieldset--timer .b-field__checkbox[name="centred"] + label,
+.b-fieldset--timer .b-form__field + .b-form__field,
+.b-fieldset--timer .b-field--size {
+    display: none;
+}
+
+.b-fieldset--timer .b-field__checkbox[name="active"],
+.b-field__checkbox {
+    width: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -2px 5px 0;
+}
+
+.b-field__checkbox[name="promoState"] {
+    margin: -4px 2px 0;
+}
+
+.b-fieldset--timer .b-field--color {
+    display: block !important;
+}
+
+.b-field--color .b-field__input {
+    display: none;
+}
+
+
+.input-list__item_text {
+    display: block;
+    width: 100%;
+    height: 70px;
+    padding: 6px 12px;
+    border-radius: 2px;
+    outline: none;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+}
