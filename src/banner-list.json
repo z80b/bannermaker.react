@@ -1,0 +1,152 @@
+{
+  "banners": [
+    {
+      "name": "Выберите баннер",
+      "id": ""
+    },
+    {
+      "name": "Best Action",
+      "id": "best-action"
+    },
+    {
+      "name": "Bottom Slider",
+      "id": "bottom-slider-no-extra-tags"
+    },
+    {
+      "name": "IP block discounts",
+      "id": "ip-block-discounts"
+    },
+    {
+      "name": "Partners footer",
+      "id": "footer-partners-banner"
+    },
+    {
+      "name": "IP App",
+      "id": "app-banner"
+    },
+    {
+      "name": "IP Brand group (old)",
+      "id": "brand-group"
+    },
+    {
+      "name": "IP Brand group",
+      "id": "ip-brand-group"
+    },
+    {
+      "name": "IP Banner (old)",
+      "id": "ip-banner"
+    },
+    {
+      "name": "IP Best Actions",
+      "id": "ip-sum16"
+    },
+    {
+      "name": "IP Image banner",
+      "id": "ip-image-banner"
+    },
+    {
+      "name": "IP banner one discount",
+      "id": "ip-banner-one-discount"
+    },
+    {
+      "name": "IP banner separate discounts",
+      "id": "ip-banner-separate-discounts"
+    },
+    {
+      "name": "IP Zalora",
+      "id": "ip-zalora"
+    },
+    {
+      "name": "IP Mobile",
+      "id": "mobile-ip-banner"
+    },
+    {
+      "name": "IP Video banner",
+      "id": "ip-video"
+    },
+    {
+      "name": "lookbook",
+      "id": "lookbook"
+    },
+    {
+      "name": "Lookbook trends",
+      "id": "lookbook-trends"
+    },
+    {
+      "name": "Main Video Banner (With Network Check)",
+      "id": "main-video-banner-with-network-check"
+    },
+    {
+      "name": "Main Premium Banner",
+      "id": "main-premium-banner"
+    },
+    {
+      "name": "Premium occasion banner",
+      "id": "main-premium-occasion"
+    },
+    {
+      "name": "Premium Blog Banner",
+      "id": "premium-blog-banner"
+    },
+    {
+      "name": "Premium Brand Teaser",
+      "id": "premium-brand-teaser"
+    },
+    {
+      "name": "Premium Teaser",
+      "id": "premium-teaser"
+    },
+    {
+      "name": "Smartbanner.2.0 (mobile)",
+      "id": "smartbanner.2.0"
+    },
+    {
+      "name": "Smartbanner.3.0 (mobile)",
+      "id": "smartbanner.3.0"
+    },
+    {
+      "name": "Sq long teaser",
+      "id": "sq-loong-teaser"
+    },
+    {
+      "name": "Sq main banner",
+      "id": "sq-main-banner"
+    },
+    {
+      "name": "Sq teaser",
+      "id": "sq-teaser"
+    },
+    {
+      "name": "Sq Video teaser",
+      "id": "sq-video-teaser"
+    },
+    {
+      "name": "Top menu banner",
+      "id": "top-menu-banner"
+    },
+    {
+      "name": "Teasers (redesign)",
+      "id": "teasers-redesign"
+    },
+    {
+      "name": "Tilda subscription",
+      "id": "tilda-subscription"
+    },
+    {
+      "name": "USP Colored",
+      "id": "usp-colored"
+    },
+    {
+      "name": "USP (redesign) (NOT READY)",
+      "id": "usp-redesign"
+    },
+    {
+      "name": "USP top (NOT READY)",
+      "id": "usp-top"
+    },
+    {
+      "name": "*test for go template (.json)",
+      "id": "go-template"
+    }
+  ]
+}
