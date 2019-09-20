@@ -22,6 +22,7 @@ export default class Root extends React.Component {
     });
 
     //browserHistory.push(bannerId);
+    this.props.history.push(bannerId);
 
   }
 
