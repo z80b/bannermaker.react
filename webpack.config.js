@@ -32,7 +32,10 @@ module.exports = {
         use: {
           loader: "babel-loader",
           query: {
-            presets: ['@babel/react']
+            presets: [
+              '@babel/preset-env',
+              '@babel/preset-react'
+            ]
           }
         }
       },

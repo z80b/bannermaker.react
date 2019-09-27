@@ -16,7 +16,7 @@ const bannersList = (() => {
 
 export const GetBannerName = (value) => {
   if (value.value !== '') {
-    var Banner = require(`./banners/${value.value}.jsx`).default;
+    var Banner = require(`./banners/${value.value}/index.jsx`).default;
     return (<Banner />);
   }
   else {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-class AppBanner extends React.Component {
+class IpBnner extends React.Component {
   constructor(props) {
     super(props);
 
@@ -17,9 +17,9 @@ class AppBanner extends React.Component {
 
   render() {
     return (
-      <div className="bm-page"></div>
+      <div className="bm-page">?????</div>
     )
   }
 }
 
-export default AppBanner;
+export default IpBnner;
